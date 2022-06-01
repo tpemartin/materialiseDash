@@ -72,7 +72,7 @@ actionMenu <- function(..., title=""){
   list_actions
 }
 float_btn_fn <- function(){
-  button_float(icon("menu", class="grey-text"), class="right amber lighten-5")
+  button_float(icon("menu", class="grey-text"), class="right white")
 }
 test2 <- function(){
   actionMenu(title="大選年份", "2012", "2016", "2020") |>

@@ -16,6 +16,13 @@ obtain_css = function(){
   sass::sass(sass::sass_file(sassfile))
 
 }
+div_widget = function(...){
+  require(htmltools)
+  div(
+    style=css("position"="relative"),
+    ...
+  )
+}
 navItem = function(
     href = "sass.html",
     content="Sass"
@@ -24,7 +31,7 @@ navItem = function(
     content))
 }
 nav <- function(
-  title="Logo", ...  
+  title="Logo", ...
   ){
   require(htmltools)
     tags$nav(tags$div(class = "nav-wrapper",
@@ -34,7 +41,7 @@ nav <- function(
       tags$ul(id = "nav-mobile",
         class = "left hide-on-med-and-down",
         ...)))-> tag_element
-  
+
   tag_element |> attachMaterialiseDep()
 }
 
